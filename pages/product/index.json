@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "bottom-popup":"../../components/bottomPopup",
+    "back-top": "../../components/backTop",
+    "recommend": "../../components/recommend",
+    "pull-refresh":"../../components/pullRefresh/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index"
+  }
+}

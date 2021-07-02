@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "recommend": "../../components/recommend",
+    "nav-bar":"../../components/navBar",
+    "pull-refresh":"../../components/pullRefresh/index",
+    "count-down": "../../components/countDown"
+  }
+}

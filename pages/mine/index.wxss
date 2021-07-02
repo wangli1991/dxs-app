@@ -1,0 +1,122 @@
+.mine-scroll {
+  width: 100%;
+  height: 100%;
+}
+.mine-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mine-container .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+.mine-container .userinfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.mine-container .userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.mine-container .userinfo-nickname {
+  font-size: 36rpx;
+  color: #333;
+}
+.mine-container .content {
+  flex: 1;
+  margin-top: 20rpx;
+}
+.mine-container .mine-order .order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 30rpx 0;
+}
+.mine-container .mine-order .order-header .text {
+  font-size: 32rpx;
+  color: #333;
+}
+.mine-container .mine-order .order-header .more {
+  font-size: 26rpx;
+  color: #666;
+}
+.mine-container .order-container {
+  display: flex;
+  align-items: center;
+}
+.mine-container .order-container .item {
+  flex: 1;
+  padding: 40rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mine-container .order-container .all {
+  position: relative;
+}
+.mine-container .order-container .all::before,
+.mine-container .order-container .all::after {
+  content: "";
+  position: absolute;
+}
+.mine-container .order-container .all::after {
+  width: 10rpx;
+  height: 80rpx;
+  left: 0;
+  top: 40rpx;
+  box-shadow: -4rpx 0 6rpx -3rpx rgba(0, 0, 0, 0.3);
+}
+.mine-container .order-container .all::before {
+  width: 14rpx;
+  height: 14rpx;
+  left: -7rpx;
+  top: 73rpx;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+.mine-container .order-container .all:before {
+  background: #fff;
+  box-shadow: -4rpx -4rpx 6rpx -3rpx rgba(0, 0, 0, 0.3);
+}
+
+.mine-container .order-container .iconfont {
+  font-size: 60rpx;
+  color: #02c521;
+}
+.mine-container .order-container .text {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1;
+  margin-top: 20rpx;
+}
+
+.mine-container .fun-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.mine-container .fun-container .item {
+  width: 25%;
+  padding: 40rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mine-container .fun-container .iconfont {
+  font-size: 60rpx;
+}
+.mine-container .fun-container .text {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pull-refresh":"../../components/pullRefresh/index",
+    "navbar-main": "../../components/navbarMain"
+  }
+}

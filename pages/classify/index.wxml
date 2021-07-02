@@ -1,0 +1,74 @@
+<!-- pages/classify/classify.wxml -->
+<view class="component-container" hidden="{{selected!==1}}">
+  <view class="header classify-header">
+    <navbar-main title="分类" searchColor="#f2f2f2" />
+  </view>
+  <view class="container">
+    <view class="classify-container">
+      <view class="classify-side">
+        <scroll-view class="classify-side-scroll" scroll-y="true">
+          <block wx:for="{{classifyList}}" wx:key="index">
+            <view class="scroll-view-item {{index==currrentClassify?'active':''}}" data-index="{{index}}" bindtap="classifyTap">
+              <text class="iconfont icon-zan"></text>
+              <text class="text">{{item.name}}</text>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="classify-content">
+        <view class="head">
+          <block wx:for="{{sortList}}" wx:key="index">
+            <view class="head-item {{index==currentSort?'active':''}}" data-index="{{index}}" bindtap="sortTap">
+              <view class="text app-fz26">{{item.name}}</view>
+              <view class="icons" wx:if="{{item.can_sort}}">
+                <view class="item">
+                  <text class="iconfont icon-sort-up {{sortType>0?'active':''}}"></text>
+                </view>
+                <view class="item">
+                  <text class="iconfont icon-sort-down {{sortType<0?'active':''}}"></text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="foot">
+          <pull-refresh class="pull-refresh" scroll-top="{{scrollTop}}" bindrefresherpulling="pullingHandle" bindrefresherrefresh="refreshHandle" bindrefresherrestore="restoreHandle" refreshing="{{isRefreshing}}" bindlower="lowerHandle" pullText="{{pullText}}" nomore="{{!loadMore}}" loadmoreText="{{loadMoreText}}">
+            <block wx:for="{{productList}}" wx:key="index">
+              <view class="classify-item" data-id="{{item.id}}" bindtap="productTap">
+                <view class="img-container">
+                  <image class="img" src="{{filePath}}/file/picDownload?fileId={{item.main_picture}}&downloadFlag=0" mode="aspectFit" lazy-load="true" />
+                </view>
+                <view class="content">
+                  <view class="header app-fz30">
+                    <view class="title">{{item.name}}</view>
+                    <view class="tag discount">
+                      {{item.full_reduction_count}}件{{item.full_reduction_cost}}元
+                    </view>
+                  </view>
+                  <view class="footer">
+                    <view class="tag">{{item.discount}}折优惠</view>
+                    <view class="buy">
+                      <view class="buy-price">
+                        <text class="now app-fz30">
+                          <text class="unit ff-num app-fz22">￥</text>
+                          <text class="ff-num">{{item.sales_price}}</text>
+                        </text>
+                        <text class="old ff-num app-fz20 app-line-through">
+                          ￥{{item.market_price}}
+                        </text>
+                      </view>
+                      <view class="buy-cart" data-product="{{item.id}}" catchtap="addCartHandle">
+                        <text class="iconfont icon-add-cart"></text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+            <view class="classify-tips" wx:if="{{isInitPage}}">上滑加载更多好物...</view>
+          </pull-refresh>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

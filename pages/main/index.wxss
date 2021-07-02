@@ -1,0 +1,18 @@
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.page-container .main {
+  flex: 1;
+  overflow: hidden;
+}
+.page-container .main .main-item {
+  height: 100%;
+}
+.page-container .footer {
+  flex: 0;
+  flex-basis: auto;
+  height: 52px;
+}

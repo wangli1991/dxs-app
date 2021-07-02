@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tab-bar":"../../components/tabBar",
+    "home":"../../pages/home",
+    "classify":"../../pages/classify",
+    "cart":"../../pages/cart",
+    "mine":"../../pages/mine"
+  }
+}
